@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package xmlns="http://expath.org/ns/pkg" name="https://www.insee.fr/restxq" abbrev="restxq" version="1.0.0" spec="1.0">
+<package xmlns="http://expath.org/ns/pkg" name="https://www.insee.fr/WS" abbrev="WS" version="1.0.0" spec="1.0">
     <title>WS</title>
 </package>
