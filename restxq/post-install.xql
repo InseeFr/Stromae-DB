@@ -18,4 +18,4 @@ xmldb:move("/db/apps/restxq/form","/db/restxq"),
 xmldb:move("/db/apps/restxq/reponse","/db/restxq"),
 xmldb:move("/db/apps/restxq/util","/db/restxq"),
 xmldb:move("/db/apps/restxq/visualize","/db/restxq"),
-xmldb:move("/db/apps/restxq/common","/db/restxq","properties.xml")
+xmldb:move("/db/apps/restxq","/db/restxq","properties.xml")
