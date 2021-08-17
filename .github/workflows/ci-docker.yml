@@ -16,12 +16,6 @@ jobs:
           cd WS && ant && cd ..
         shell: bash
 
-
-  docker:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
