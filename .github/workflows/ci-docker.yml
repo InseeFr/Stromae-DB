@@ -8,11 +8,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      
+
       - name: install
         run: |
-          ls -l
-          cd apps && ant && cd ..
+          cd apps/orbeon && ant && cd ../..
           cd restxq && ant && cd ..
           cd WS && ant && cd ..
           cd visualize && ant && cd ..
