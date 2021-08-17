@@ -7,9 +7,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v2
+      
       - name: install
         run: |
-         ls -l
+          ls -l
           cd apps && ant && cd ..
           cd restxq && ant && cd ..
           cd WS && ant && cd ..
