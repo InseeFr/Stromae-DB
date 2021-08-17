@@ -12,4 +12,6 @@ declare variable $dir external;
 declare variable $target external;
 
 xmldb:create-collection("/db","WS"),
-xmldb:move("/db/apps/WS","/db")
+xmldb:move("/db/apps/WS","/db/WS","collectes.xql"),
+xmldb:move("/db/apps/WS","/db/WS","model.xql"),
+xmldb:move("/db/apps/WS","/db/WS","visualize.xql")

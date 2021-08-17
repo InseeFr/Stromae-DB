@@ -12,4 +12,10 @@ declare variable $dir external;
 declare variable $target external;
 
 xmldb:create-collection("/db","restxq"),
-xmldb:move("/db/apps/restxq","/db")
+xmldb:move("/db/apps/restxq/common","/db/restxq"),
+xmldb:move("/db/apps/restxq/model","/db/restxq"),
+xmldb:move("/db/apps/restxq/form","/db/restxq"),
+xmldb:move("/db/apps/restxq/reponse","/db/restxq"),
+xmldb:move("/db/apps/restxq/util","/db/restxq"),
+xmldb:move("/db/apps/restxq/visualize","/db/restxq"),
+xmldb:move("/db/apps/restxq/common","/db/restxq","properties.xml")
