@@ -4,5 +4,5 @@ EXPOSE 8080 8443
 
 COPY conf/conf.xml /exist/etc
 COPY WS/build/*.xar /exist/autodeploy
-COPY orbeon/build/*.xar /exist/autodeploy
+COPY apps/orbeon/build/*.xar /exist/autodeploy
 COPY restxq/build/*.xar /exist/autodeploy
