@@ -9,9 +9,9 @@ jobs:
     steps:
       - name: install
         run: |
-          cd orbeon && ant && cd ..
+          cd apps && ant && cd ..
           cd restxq && ant && cd ..
-          cd notrestxq && ant && cd ..
+          cd WS && ant && cd ..
           cd visualize && ant && cd ..
         shell: bash
 
