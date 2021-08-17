@@ -11,9 +11,9 @@ jobs:
 
       - name: install
         run: |
-          cd apps/orbeon && ant && cd ../..
-          cd restxq && ant && cd ..
-          cd WS && ant && cd ..
+          cd apps/orbeon && ant && cd build && ls -l && cd ../../..
+          cd restxq && ant  && cd build && ls -l && cd ../..
+          cd WS && ant  && cd build && ls -l && cd ../..
         shell: bash
 
       - name: Publish to Registry
