@@ -3,10 +3,7 @@
     <comment>---config des bases xml---</comment>
 
     <!--mots de passe associés aux comptes xxx.user.login.xxx défini plus bas-->
-    
-    <!--orbeon-->
-    <entry key="stromae.uri.base">https://stromae-db.dev.insee.io:8080/</entry>
- 
+   
     <!--mots de passe associés aux comptes xxx.user.login.xxx défini plus bas-->
     
     <!--stromae-->

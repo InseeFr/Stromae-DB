@@ -67,7 +67,7 @@ let $properties := doc('properties.xml')/properties
 let $protocol_orbeon := $properties/host_orbeon/protocol/text()
 let $ip_orbeon := $properties/host_orbeon/ip/text()
 let $app_orbeon := $properties/host_orbeon/app/text()
-let $url := concat($protocol_orbeon,'://',$ip_orbeon,'/',$app_orbeon,'/fr/',$dataCollection,'/', $model, '/new?unite-enquete=',$unite)
+let $url := concat('/fr/',$dataCollection,'/', $model, '/new?unite-enquete=',$unite)
 
 return 
 (     
