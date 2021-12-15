@@ -1,4 +1,4 @@
-FROM existdb/existdb:4.5.0
+FROM existdb/existdb:5.3.1
 
 EXPOSE 8080 8443
 
