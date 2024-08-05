@@ -33,6 +33,9 @@ COPY --from=exist-db /exist/LICENSE /exist/LICENSE
 COPY --from=exist-db /exist/etc /exist/etc
 COPY --from=exist-db /exist/logs /exist/logs
 
+## Add exist-db apps:
+COPY --from=exist-db /exist/autodeploy/* /exist/autodeploy/
+
 ## Add custom configuration
 COPY --from=builder /exist/lib /exist/lib
 COPY --from=builder /build-exist/target/*.xar /exist/autodeploy/
