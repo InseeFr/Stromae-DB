@@ -14,4 +14,4 @@ jobs:
           name: inseefr/stromae-db
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          tags: 2.1.1
+          tags: 2.1.2
