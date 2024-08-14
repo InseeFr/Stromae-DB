@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <Properties>
+      <Property name="logs">${log4j:configParentLocation}/../logs</Property>
+      <Property name="rollover.max.size">10MB</Property>
+      <Property name="rollover.max">14</Property>
+      <Property name="rollover.file.pattern">%d{yyyyMMddHHmmss}</Property>
+      <Property name="exist.file.pattern">%d [%t] %-5p (%F [%M]:%L) - %m %n</Property>
+   </Properties>
+   <Appenders>
+      <Console name="STDOUT">
+         <PatternLayout pattern="%d{DATE} [%t] %-5p (%F [%M]:%L) - %m %n"/>
+      </Console>
+    </Appenders>
+   <Loggers>
+      <Logger name="org.exist.storage.lock.LockTable"
+              additivity="false"
+              level="info">    <!-- set to level="trace" to see lock activity -->
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <Logger name="org.exist.storage.lock.EnsureLockingAspect"
+              additivity="false"
+              level="trace">
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <Logger name="org.exist.util.sanity.SanityCheck"
+              additivity="false"
+              level="info">
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <Logger name="org.exist.jetty.JettyStart" additivity="false" level="trace">
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <Logger name="org.exist.jetty.StandaloneServer"
+              additivity="false"
+              level="trace">
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <Logger name="xquery.profiling" additivity="false" level="trace">
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <Logger name="org.exist.statistics" additivity="false" level="debug">
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <Logger name="org.exist.backup.SystemExport"
+              additivity="false"
+              level="trace">
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <Logger name="org.exist.xmldb" additivity="false" level="info">
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <Logger name="org.exist.xmlrpc" additivity="false" level="info">
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <Logger name="org.apache.xmlrpc" additivity="false" level="info">
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <Logger name="org.exist.http.urlrewrite" additivity="false" level="info">
+            <!-- set to "trace" to get detailed info on URL rewriting -->
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <Logger name="org.exist.extensions.exquery.restxq"
+              additivity="false"
+              level="info">
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <Logger name="org.eclipse.jetty" additivity="false" level="info">
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <Logger name="httpclient" additivity="false" level="info">
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <Logger name="net.sf.ehcache" additivity="false" level="info">
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <!-- Milton WebDAV framework -->
+      <Logger name="com.bradmcevoy" additivity="false" level="info">
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <!-- Apache Axis: 'debug' produces a large amount of debugging output -->
+      <Logger name="org.apache" additivity="false" level="off">
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <!-- Quartz scheduler -->
+      <Logger name="org.quartz" additivity="false" level="info">
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <Logger name="org.exist.storage.SystemTask"
+              additivity="false"
+              level="debug">
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <!-- betterFORM extension -->
+      <Logger name="de.betterform" additivity="false" level="warn">
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <!-- expath pkg repo -->
+      <Logger name="org.expath.pkg" additivity="false" level="info">
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <Logger name="org.exist.repo" additivity="false" level="info">
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <Logger name="org.exist.launcher" additivity="false" level="warn">
+         <AppenderRef ref="STDOUT"/>
+      </Logger>
+      <Root level="info">
+         <AppenderRef ref="STDOUT"/>
+      </Root>
+   </Loggers>
+</Configuration>

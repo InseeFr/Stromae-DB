@@ -7,11 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: inseefr/stromae-db
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          tags: 2.1.0
+          tags: 2.1.2
