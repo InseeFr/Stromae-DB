@@ -15,9 +15,9 @@ RUN rm -rf /exist/lib/exist.uber.jar
 COPY content /build-exist
 # add new libs
 RUN cd /build-exist && mvn package
-RUN unzip -q -o /build-exist/target/\*.jar -d /exist/lib/
+# RUN unzip -q -o /build-exist/target/\*.jar -d /exist/lib/
 # Delete jar
-RUN rm -rf /exist/lib/*.jar
+# RUN rm -rf /exist/lib/*.jar
 
 # Make final exist jar without CVE
 RUN cd /exist/lib && zip -q -m -r exist.uber.jar *
