@@ -1,5 +1,5 @@
 FROM existdb/existdb:6.2.0 AS exist-db
-FROM maven:3.9.4-eclipse-temurin-8-focal AS builder
+FROM maven:3.9.9-eclipse-temurin-8-focal AS builder
 
 ## Add zip and unzip command
 RUN apt-get update && \
@@ -23,7 +23,7 @@ RUN rm -rf /exist/lib/*.jar
 RUN cd /exist/lib && zip -q -m -r exist.uber.jar *
 
 
-FROM eclipse-temurin:8u392-b08-jre-jammy
+FROM eclipse-temurin:8u402-b08-jre-jammy
 
 # For next lines, inspired by
 # # https://github.com/eXist-db/exist/blob/develop-6.x.x/exist-docker/src/main/resources-filtered/Dockerfile
