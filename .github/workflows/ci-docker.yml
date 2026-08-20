@@ -20,4 +20,4 @@ jobs:
           push: true
           tags: |
             inseefr/stromae-db:latest,
-            inseefr/stromae-db:2.2.0-rc.0
+            inseefr/stromae-db:2.2.0
