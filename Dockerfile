@@ -1,4 +1,4 @@
-FROM existdb/existdb:6.2.0 AS exist-db
+FROM existdb/existdb:6.4.1 AS exist-db
 FROM maven:3.9.9-eclipse-temurin-8-focal AS builder
 
 ## Add zip and unzip command
