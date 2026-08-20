@@ -23,7 +23,7 @@ RUN rm -rf /exist/lib/*.jar
 RUN cd /exist/lib && zip -q -m -r exist.uber.jar *
 
 
-FROM eclipse-temurin:8u402-b08-jre-jammy
+FROM eclipse-temurin:8u492-b09-jre-noble
 
 # For next lines, inspired by
 # # https://github.com/eXist-db/exist/blob/develop-6.x.x/exist-docker/src/main/resources-filtered/Dockerfile
